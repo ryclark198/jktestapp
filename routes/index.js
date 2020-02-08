@@ -12,8 +12,8 @@ router.get('/another', function(req, res, next) {
 });
 // /api/add?n1=xn2=
 router.get('/api/add', function(req,res, next) {
-  var n1 =(req.query.n1);
-  var n2 =(req.query.n2);
+  var n1 =parseInt(req.query.n1);
+  var n2 =parseInt(req.query.n2);
   res.json(math.add(n1,n2));
 });
 
